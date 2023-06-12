@@ -4,7 +4,7 @@
 //and after removing bring all the unique elements to the front
 
 //think of a solution and implement it effictivly without code errors
-
+//sample code
 
 //solution
 //i am going to implement an hash set
