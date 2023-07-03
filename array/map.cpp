@@ -17,6 +17,11 @@ int main() {
 	for(int i=0;i<n;i++) {
 		m[arr[i]]++;
 	 }
+	//iterate the map
+	for(auto o:m) {
+		cout << o.first << "->" << o.second << endl;
+	}
+	
 	 
 	 int a;
 	 cin >> a;
