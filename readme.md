@@ -1,6 +1,6 @@
 # Data Structures and Algorithms
 
-This repository contains implementations and explanations of various data structures and algorithms in C++.
+This repository contains explanations and resources related to various data structures and algorithms.
 
 ## Table of Contents
 
@@ -20,59 +20,43 @@ This repository contains implementations and explanations of various data struct
 
 ## Introduction
 
-This repository is aimed at providing a comprehensive collection of data structures and algorithms implemented in C++. Understanding these fundamental concepts is crucial for any software developer to build efficient and scalable solutions.
+This repository aims to provide a comprehensive collection of explanations and concepts related to data structures and algorithms. Understanding these fundamental concepts is crucial for any software developer to build efficient and scalable solutions.
 
 ## Data Structures
 
 ### Array
 
-[Array Implementation](array.cpp)
-
-Description and implementation of an array data structure.
+Description and explanation of an array data structure.
 
 ### Linked List
 
-[Linked List Implementation](linked_list.cpp)
-
-Description and implementation of a linked list data structure.
+Description and explanation of a linked list data structure.
 
 ### Stack
 
-[Stack Implementation](stack.cpp)
-
-Description and implementation of a stack data structure.
+Description and explanation of a stack data structure.
 
 ### Queue
 
-[Queue Implementation](queue.cpp)
-
-Description and implementation of a queue data structure.
+Description and explanation of a queue data structure.
 
 ### Tree
 
-[Tree Implementation](tree.cpp)
-
-Description and implementation of a binary tree data structure.
+Description and explanation of a binary tree data structure.
 
 ## Algorithms
 
 ### Sorting
 
-[Sorting Algorithms](sorting_algorithms.cpp)
-
-Various sorting algorithms like bubble sort, selection sort, insertion sort, merge sort, and quick sort.
+Explanation of various sorting algorithms like bubble sort, selection sort, insertion sort, merge sort, and quick sort.
 
 ### Searching
 
-[Searching Algorithms](searching_algorithms.cpp)
-
-Various searching algorithms like linear search, binary search, and more.
+Explanation of various searching algorithms like linear search, binary search, and more.
 
 ### Graph Algorithms
 
-[Graph Algorithms](graph_algorithms.cpp)
-
-Graph traversal algorithms like depth-first search (DFS) and breadth-first search (BFS).
+Explanation of graph traversal algorithms like depth-first search (DFS) and breadth-first search (BFS).
 
 ## Contributing
 
