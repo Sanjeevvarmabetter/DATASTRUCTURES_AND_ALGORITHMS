@@ -8,7 +8,7 @@ public:
     int ladderLength(string beginWord, string endWord, vector<string>& wordList) {
         queue<pair<string,int>> q;
         q.push({beginWord,1});
-        set<int> st(wordList.begin(),wordList.end());
+        unordered_set<string> st(wordList.begin(),wordList.end());
         st.erase(beginWord);
 
         while(!q.empty()) {
@@ -19,14 +19,17 @@ public:
 
         for(int i=0;i<word.size();i++) {
                 char original = word[i];
-            for(char c = 'a';c<'z';c++) {
+            for(char c = 'a';c<='z';c++) {
                 word[i] = c;
             }
 
             //if the word exists
 
             if(st.find(word) != st.end()) {
-                st.erase(word);
+               if(word == endWord) {
+			return steps + 1;
+		}
+		st.erase(word);
                 q.push({word, steps + 1});
             }
             word[i] = original;
