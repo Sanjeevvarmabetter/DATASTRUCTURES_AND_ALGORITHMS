@@ -10,7 +10,7 @@ private:
     bool dfs(int node,int col,int color[],vector<int> adjacent[]) {
             color[node]  = col;
 
-            for(auto e:adjacent) {
+            for(auto e : adjacent) {
                 if (color[e] == -1) {
                     if(dfs(e,!col,color,adjacent==false)) {
                         return false;
