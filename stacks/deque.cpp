@@ -7,14 +7,14 @@ struct Node {
 	int data;
 	struct Node* next;
 	struct Node* prev;
-}Node;
+} Node;
 
 //structure for deque
 
 
 struct {
-	Node * front;
-	Node * rear;
+	Node* front;
+	Node* rear;
 }Deque;
 
 
@@ -40,16 +40,30 @@ void initDeque(Deque* deque) {
 
 //function to add element to the front 
 
+void add_element_to_front(Deque* deque,int data) {
+	
+}
 
 
 //function to add the element to the rear
+void add_element_to_rear(Deque* deque,int data) {
 
+}
 
 //function to remove element from the front
+void remove_element_from_front(Deque* deque) {
 
+}
 
 //function to remove the element from the rear
+void remove_element_from_rear(Deque* deque) {
 
+}
 
 //function to display the elements of the deque
 //
+
+
+void display_the_elements(Deque* deque) {
+
+}
