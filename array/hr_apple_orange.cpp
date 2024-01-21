@@ -6,6 +6,9 @@
 
 using namespace std;
 
+class Solution {
+public:
+
 void bruteforce_apples_oranges(int s,int t,int a,int b,vector<int>apples,vector<int>oranges) {
     int a_count = 0;
     int b_count = 0;
@@ -37,5 +40,23 @@ void bruteforce_apples_oranges(int s,int t,int a,int b,vector<int>apples,vector<
     cout << a_count << endl;
     cout << b_count << endl;
 }
+void better_apple_oranges(int s,int t,int a,int b,vector<int> apples,vector<int> oranges) {
+    int a_count = 0,b_count = 0;
+    int r;
+    for(int i=0;i<apples.size();i++) {
+        r  = a + apples[i];
+        if(r >= s && r<= t) {
+            a_count++;
+        }
+    }
+    for(int i=0;i<oranges.size();i++) {
+        r = b + oranges[i];
+        if(r>=s && r<=t) {
+            b_count++;
+    }
 
+    cout << a_count << endl;
+    cout << b_count << endl;
+}
 
+};
