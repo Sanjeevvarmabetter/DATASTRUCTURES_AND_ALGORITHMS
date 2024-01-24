@@ -41,18 +41,39 @@ void initDeque(Deque* deque) {
 //function to add element to the front 
 
 void add_element_to_front(Deque* deque,int data) {
-	
+	Node* newnode = create_new_node(data);
+	if (deque -> front == NULL) {
+		deque -> front = deque -> rear = newnode;
+	}
+	else {
+		newnode -> next = deque -> front;
+		deque -> front -> prev = newnode; //prev ptr of the current front node is set to newnode
+		deque -> front = newnode; //finally the new front ptr is set to newnode
+	}
+
 }
 
 
 //function to add the element to the rear
 void add_element_to_rear(Deque* deque,int data) {
+	Node* node = create_new_node(data);
+
+	if(deque -> rear == NULL) {
+		deque -> front = deque -> rear = newnode;
+	}
+	else {
+		newnode -> prev = deque -> rear;
+		deque -> rear -> next = newnode;
+		deque -> rear = newnode; //the new rear ptr is set to newnode
+	}
+
 
 }
 
+
 //function to remove element from the front
 void remove_element_from_front(Deque* deque) {
-
+	
 }
 
 //function to remove the element from the rear
@@ -65,5 +86,10 @@ void remove_element_from_rear(Deque* deque) {
 
 
 void display_the_elements(Deque* deque) {
-
+	Node* current = deque -> front;
+	while(current != NULL) 
+	{
+		cout << current -> data;
+		current = current -> next
+	}
 }

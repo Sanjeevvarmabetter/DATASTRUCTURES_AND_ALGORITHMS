@@ -30,7 +30,7 @@ private:
 
 }
 public:
-    vector<int> sliding_window(vector<int> &nums,int k) {
+    vector<int> bruteforce_sliding_window(vector<int> &nums,int k) {
         //i am placing two pointers left and right
         //then the right will get incremented according to the k value
     
