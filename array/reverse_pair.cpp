@@ -7,7 +7,7 @@ using namespace std;
 class Solution {
     public:
     //my brute_force simple approach
-    int reverse_pairs(vector<int> &nums) {
+    int brute_reverse_pairs(vector<int> &nums) {
         // reverse pairs
         //0<=i<j<nums.length
         // nums[i] > 2 * nums[j]
@@ -22,6 +22,23 @@ class Solution {
             }
         }
     return n;    
+    
+    }
+    public:
+    
+    int optimal_reverse_pairs(vector<int> &nums) {
+        // //we need to perform a merge sort
+        // [1,2,3,2,1]
+        // |          |
+        // [1,2]    [3,2,1]
+        // |               |
+        // [1][2]       [3][2][1]   
+        // |               |
+        // [1,2]       [1,2,3]
+        //     ->[1,1,2,2,3]
+
+    count = count + (right -(mid + 1)) -> this will give you no of elements before the num, as the elements are smaller than num
+    
     }
 
 
@@ -36,7 +53,7 @@ int main() {
     for(int i=0;i<n;i++) {
         cin >> nums[i];
     }
-    int ans = s.reverse_pairs(nums);
+    int ans = s.brute_reverse_pairs(nums);
     cout << ans << endl;
     return 0;
 } 
