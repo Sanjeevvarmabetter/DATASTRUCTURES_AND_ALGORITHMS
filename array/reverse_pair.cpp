@@ -37,7 +37,7 @@ class Solution {
         // [1,2]       [1,2,3]
         //     ->[1,1,2,2,3]
 
-    count = count + (right -(mid + 1)) -> this will give you no of elements before the num, as the elements are smaller than num
+    count = count + (right -(mid + 1)) -> this will give you no of elements before the num, as the elements are smaller than
     
     }
 
