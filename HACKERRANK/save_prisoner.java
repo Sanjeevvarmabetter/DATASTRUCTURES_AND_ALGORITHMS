@@ -35,4 +35,15 @@ class save_prisoner {
         }
         return counter;
     }
+
+
+    public static int answer(int n,int m,int s) {
+        int ans = (s+m-1) % n;
+
+        if(ans ==0) {
+            return n;
+        }
+    return ans;
+    }
 }
+
