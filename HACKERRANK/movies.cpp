@@ -4,20 +4,31 @@
 
 class Solution {
     public:
-    int beautiful_days(int i,int j,int k) {
+    int reverse(int i) {
         // 20 -> 02
-        int interval1;
-        int il = i;
-        int temp1;
+
+        int temp;
+        int l=i;
         while(i<0) {
-            int rem = i%10;
-            temp1 = temp1*10 + rem;
+            int rev = i%10;
+            temp = temp *10 + rev;
             i = i/10;
         }
 
-        temp1  = (il - temp1)/k; //this will give the first interval
-        
-
-    
+        return temp;
     }
+
+
+        int bruteforce_beautiful_days(int i,int j,int k) {
+
+            int counter = 0;
+            for(int m = i;m<=j;m++) {
+                int rev = reverse(m) - m;
+                if(rev%2==0) {
+                    counter++;
+                }
+            }
+
+            return counter;
+        }
 };
