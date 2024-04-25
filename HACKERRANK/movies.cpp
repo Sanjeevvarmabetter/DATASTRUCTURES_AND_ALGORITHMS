@@ -16,7 +16,8 @@ class Solution {
         }
 
         temp1  = (il - temp1)/k; //this will give the first interval
+        
 
     
     }
-}
+};
