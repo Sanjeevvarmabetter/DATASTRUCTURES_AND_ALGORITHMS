@@ -1,3 +1,5 @@
+#include<bits/stdc++.h>
+using namespace std;
 // reverse number difference
 
 
@@ -9,7 +11,7 @@ class Solution {
 
         int temp;
         int l=i;
-        while(i<0) {
+        while(i==0) {
             int rev = i%10;
             temp = temp *10 + rev;
             i = i/10;
@@ -23,8 +25,8 @@ class Solution {
 
             int counter = 0;
             for(int m = i;m<=j;m++) {
-                int rev = reverse(m) - m;
-                if(rev%2==0) {
+                int rev = abs(reverse(m) - m);
+                if(rev%k==0) {
                     counter++;
                 }
             }
@@ -32,3 +34,17 @@ class Solution {
             return counter;
         }
 };
+
+int main() {
+    int i,j,k;
+    cin >> i >> j >> k;
+
+    //create an object
+
+    Solution sol;
+
+    int ans = sol.bruteforce_beautiful_days(i,j,k);
+
+    cout << ans << endl;
+
+}
