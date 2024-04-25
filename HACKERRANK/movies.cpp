@@ -9,9 +9,9 @@ class Solution {
     int reverse(int i) {
         // 20 -> 02
 
-        int temp;
+        int temp=0;
         int l=i;
-        while(i==0) {
+        while(i!=0) {
             int rev = i%10;
             temp = temp *10 + rev;
             i = i/10;
