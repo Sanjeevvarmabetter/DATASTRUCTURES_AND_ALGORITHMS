@@ -20,6 +20,28 @@ class Solution {
         }
         return energy;
     }
+
+    //fixed the test case
+    int best_cloud_enery(int arr[],int n,int k) {
+             int energy = 100;
+        int current = 0;
+
+        for(int i=0;;i+=k) {
+            current = (current+k)%n;
+            energy = energy - 1;
+
+            if(arr[current] == 1) {
+                energy = energy - 2;
+
+            }
+
+            if(current == 0) {
+                break;
+            }
+
+        }
+        return energy;
+    }
 };
 
 int main() {
