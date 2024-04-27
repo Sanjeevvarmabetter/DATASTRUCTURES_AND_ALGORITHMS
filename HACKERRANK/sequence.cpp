@@ -11,7 +11,8 @@ class Solution {
         for(int i=0;i<n;i+=k) {
             current = i;
             energy = energy - 1;
-            if(arr[current] == 1) {
+
+            if(arr[i] == 1) {
                 energy = energy - 2;
 
             }
@@ -27,7 +28,7 @@ int main() {
     cin >> k;
     int arr[n];
 
-    for(int i=0;i<k;i++) {
+    for(int i=0;i<n;i++) {
         cin >> arr[i];
     }
 
