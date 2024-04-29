@@ -17,11 +17,13 @@ class Solution {
         for(int i=0;i<arr.size();i++) {
             arr[i] = arr[i] - s;
             if(arr[i] <= 0) {
-                arr.remove(i);
+                    arr.erase(arr.begin() + i);
+                    i--;
             }
         }
 
     }
+    return counts[k-1];
     }
 
     int shortest(vector<int> ans) {
@@ -42,6 +44,7 @@ int main() {
     vector<int> arr;
     int n;
     cin >> n;
+    arr.resize(n);
 
     for(int i=0;i<n;i++) {
         cin >> arr[i];
