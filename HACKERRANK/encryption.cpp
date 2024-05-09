@@ -25,18 +25,28 @@ class Solution {
 
     for(int i=0;i<row;i++) {
         for(int j=0;j<col;j++) {
-            arr[i][j] = s[k];
-            k++;
+            
+            if(k<length) {
+                arr[i][j] = s[k++];
+            }
+            else {
+                arr[i][j] = ' ';
+            }
+
         } 
     }
 
     // now print the matrix
+    string  encrypted_string = "";
 
     for(int i=0;i<row;i++) {
         for(int j=0;k<col;j++) {
-            cout << arr[i][j] << endl;
+            encrypted_string = encrypted_string + arr[i][j];
         }
+        encrypted_string += "";
     }
+
+    return encrypted_string;
 
     }
 
@@ -58,7 +68,7 @@ int main() {
  //ccreate an object
     Solution sol;
 
-    int ans = sol.encryption(s);
+    string ans = sol.encryption(s);
 
     cout << ans << endl;
     return 0;
