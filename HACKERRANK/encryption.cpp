@@ -11,13 +11,16 @@ class Solution {
     string encryption(string s) {
         
         //for finding the length also i want to do it in old method
-    int length = find_length(s);
+    int length = s.length();
 
     double root = sqrt(length);
 
     int row = floor(root);
 
     int col = ceil(root);
+
+    if(row*col < length)
+        row++;
 
     char arr[row][col];
 
@@ -39,25 +42,25 @@ class Solution {
     // now print the matrix
     string  encrypted_string = "";
 
-    for(int i=0;i<row;i++) {
-        for(int j=0;k<col;j++) {
-            encrypted_string = encrypted_string + arr[i][j];
+    for(int i=0;i<col;i++) {
+        for(int j=0;k<row;j++) {
+            encrypted_string += arr[i][j];
         }
-        encrypted_string += "";
+        encrypted_string += ' ';
     }
 
     return encrypted_string;
 
     }
 
-    int find_length(string s) {
-        int length = 0;
+    // int find_length(string s) {
+    //     int length = 0;
 
-        for(int i=0;i<s.length();i++) {
-            length++;
-        }
-        return length;
-    }
+    //     for(int i=0;i<s.length();i++) {
+    //         length++;
+    //     }
+    //     return length;
+    // }
 };
 
 
