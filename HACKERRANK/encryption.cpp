@@ -40,17 +40,20 @@ class Solution {
     }
 
     // now print the matrix
-    string  encrypted_string = "";
+
+    string encrypted_string = "";
 
     for(int i=0;i<col;i++) {
-        for(int j=0;k<row;j++) {
-            encrypted_string += arr[i][j];
+        for(int j=0;j<row;j++) {
+            encrypted_string += arr[j][i];
         }
+
         encrypted_string += ' ';
-    }
+
+    }   
+
 
     return encrypted_string;
-
     }
 
     // int find_length(string s) {
@@ -76,3 +79,4 @@ int main() {
     cout << ans << endl;
     return 0;
 }
+
