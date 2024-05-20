@@ -14,22 +14,18 @@ using namespace std;
 class Solution {
     public:
     int how_many_games(int p,int d,int m,int s) {
-            int total_amount_spent = 0;
+         int current_balance = p;
+         int remaining_balance = s;
+         int counter = 0;
 
-            int counter = 0;
-
-            while(total_amount_spent >= s) {
-                counter++;
-                s = s-p;
-                if(p<=m) {
-                    p = p+m;
-
-                }
-            }
-    }
+         while(remaining_balance >= current_balance) {
+          remaining_balance = remaining_balance - current_balance;
+          counter++;
+          current_balance = max(current_balance-d,m);
+          }
+          return counter;
+      }
 };
-
-
 
 
 int main() {
