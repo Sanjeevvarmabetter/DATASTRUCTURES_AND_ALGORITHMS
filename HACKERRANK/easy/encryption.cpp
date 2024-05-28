@@ -8,53 +8,35 @@ using namespace std;
 
 class Solution {
     public:
-    string encryption(string s) {
+string encryption(string s) {
+        int len = s.length();
+        int row = floor(sqrt(len));
+        int col = ceil(sqrt(len));
         
-        //for finding the length also i want to do it in old method
-    int length = s.length();
-
-    double root = sqrt(length);
-
-    int row = floor(root);
-
-    int col = ceil(root);
-
-    if(row*col < length)
-        row++;
-
-    char arr[row][col];
-
-    int k = 0;
-
-    for(int i=0;i<row;i++) {
-        for(int j=0;j<col;j++) {
-            
-            if(k<length) {
-                arr[i][j] = s[k++];
-            }
-            else {
-                arr[i][j] = ' ';
-            }
-
-        } 
-    }
-
-    // now print the matrix
-
-    string encrypted_string = "";
-
-    for(int i=0;i<col;i++) {
-        for(int j=0;j<row;j++) {
-            encrypted_string += arr[j][i];
+        if(row * col < len) {
+            row = col;
         }
-
-        encrypted_string += ' ';
-
-    }   
-
-
-    return encrypted_string;
-    }
+        
+        char arr[row][col];
+        int k = 0;
+        for(int i=0;i<row;i++) {
+            for(int j=0;j<col;j++) {
+                arr[i][j] = s[k];
+                k++;
+            }
+        }
+        
+        string encypted = "";
+        
+        for(int i=0;i<col;i++) {
+            for(int j=0;j<row;j++) {
+                if(arr[j][i]!='\0')
+                encypted+= arr[j][i];
+            }
+            encypted += " ";
+        }
+        return encypted;
+}
 
     // int find_length(string s) {
     //     int length = 0;
