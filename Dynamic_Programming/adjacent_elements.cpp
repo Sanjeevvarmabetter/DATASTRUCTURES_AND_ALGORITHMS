@@ -29,7 +29,20 @@ int adjacent(vector<int>&heights,int n,vector<int>&dp) {
 }
 
 
+int bottom_up(vector<int>&heights,int n) {
+	
+	vector<int> dp(n,0);
+	dp[0] = heights[0];
+	int neg = 0;
 
+	for(int i=1;i<n;i++) {
+
+		int take = heights[i] + dp[i-2];
+		int non_take = 0 + dp[i-1];
+
+		dp[i] = max(take,non_take);
+	}
+}
 
 
 int main() {
