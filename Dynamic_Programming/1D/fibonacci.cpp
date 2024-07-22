@@ -2,8 +2,7 @@
 
 using namespace std;
 
-
- int dynamic_topdown(int n,vector<int>&dp) {
+ int dynamic(int n,vector<int>&dp) {
 	 if(n<=1) {
 		 return n;
 	 }
@@ -16,9 +15,11 @@ using namespace std;
 	
 	 // the formula
 
- 	 return dp[n] = dynamic(n-1) + dynamic(n+2);
+ 	 return dp[n] = dynamic(n-1,dp) + dynamic(n+2,dp);
 
  }
+
+
 
 int dynamic_bottomup(int n,vector<int>&dp) {
 	
