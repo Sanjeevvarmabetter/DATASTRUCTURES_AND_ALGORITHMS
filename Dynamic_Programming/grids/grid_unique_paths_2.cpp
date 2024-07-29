@@ -30,7 +30,7 @@ int f(int rows,int col,vector<vector<int>> &maze,<vector<vector<int>>&dp) {
 		return 0;
 	}
 
-	if(row > 0 && col > 0 && maze == -1) {
+	if(row <0 || col < 0 || maze[row][col] == -1) {
 		return 0;
 	}
 
@@ -50,7 +50,7 @@ int f(int rows,int col,vector<vector<int>> &maze,<vector<vector<int>>&dp) {
 
 
 int obstacles(int row,int col,vector<vector<int>> ob) {
-     	vector<vector<int>> dp(n, vector<int>(m, -1)); // DP table to memoize results
+     	vector<vector<int>> dp(row, vector<int>(col, -1)); // DP table to memoize results
 
 
 	return f(row-1,col-1,dp);
