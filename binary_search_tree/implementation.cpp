@@ -34,3 +34,19 @@ Node* searchbst(Node*root,int value) {
 		return root;
 	}
 }
+
+
+Node* searchBst(Node* root,int value) {
+    	// left < root < right
+	//
+	
+	while(root != NULL && root -> val != value) {
+		root = searchBst(root->left,value);
+	}
+	else {
+		root = searchbst(root->right,value);
+	}
+
+	return root;
+}
+
