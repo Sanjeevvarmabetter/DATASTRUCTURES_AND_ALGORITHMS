@@ -48,10 +48,6 @@ bool lemon(vector<int>arr) {
 			five--;
 			
 		}
-			else {
-				return false;
-			}
-		}
 
 
 		else {
@@ -69,17 +65,8 @@ bool lemon(vector<int>arr) {
 			else {
 				return false;
 		}
-
-			else if (five>=3) {
-				five -= 3
-			}
 	}
+		}
 	}
-	
-
-
-	return true;
-
-}
 
 
